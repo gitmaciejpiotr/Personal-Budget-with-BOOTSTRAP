@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Full Width Pics - Start Bootstrap Template</title>
+    <title>Bilans tygodniowy</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Rajdhani&display=swap"
         rel="stylesheet">
     <!-- Favicon-->
@@ -22,6 +22,10 @@
         .sidebar {
             position: fixed;
             top: 0;
+            background: no-repeat url(pictures/dark_water_surface.jpg);
+            background-size: cover;
+            background-position: 80%;
+            background-attachment: fixed;
             /* rtl:raw:
   right: 0;
   */
@@ -50,7 +54,7 @@
 
         .sidebar .nav-link {
             font-weight: 500;
-            color: #333;
+            color: rgba(255, 255, 255);
         }
 
         .sidebar .nav-link .feather {
@@ -107,6 +111,18 @@
             border-color: transparent;
             box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
         }
+
+        #showBalanceMain {
+            background-color: white;
+        }
+
+        .blueHover .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .blueHover .nav-link:hover {
+            color: #2470dc;
+        }
     </style>
 </head>
 
@@ -120,11 +136,10 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="mainMenu.html"><small>O
-                                projekcie</small></a></li>
-                    <li class="nav-item"><a class="nav-link" href="registration.html"><small>Rejestracja</small></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="loggingin.html"><small>Logowanie</small></a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainMenu.html"><small>Wyloguj się &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                      </svg></small></a></li>
                 </ul>
             </div>
         </div>
@@ -147,7 +162,7 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3 sidebar-sticky mt-5">
-                    <ul class="nav flex-column">
+                    <!-- <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">
                                 <span data-feather="home" class="align-text-bottom"></span>
@@ -184,50 +199,172 @@
                                 Integrations
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
 
                     <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                        <span>Saved reports</span>
-                        <a class="link-secondary" href="#" aria-label="Add a new report">
-                            <span data-feather="plus-circle" class="align-text-bottom"></span>
-                        </a>
+                        class="sidebar-heading px-3 mt-4 mb-1 text-muted text-uppercase">
+                        Wybierz raport
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Bieżący tydzień
+                            <a class="nav-link d-flex justify-content-between active" href="#" data-bs-toggle="collapse" data-bs-target="#currentWeekCollapse"
+                                aria-expanded="false" aria-controls="currentWeekCollapse">
+                                <span>
+                                    <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                    Bieżący tydzień
+                                </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                </svg>
                             </a>
+                            <div class="collapse" id="currentWeekCollapse">
+                                <ul class="nav flex-column mb-2 blueHover">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
+                                                <path fill-rule="evenodd" d="M11 10.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h3.793L1.146 1.854a.5.5 0 1 1 .708-.708L10 9.293V5.5a.5.5 0 0 1 1 0v5z"/>
+                                              </svg> &nbsp;Przychody
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                                              </svg> &nbsp;Wydatki
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Bieżący miesiąc
+                            <a class="nav-link d-flex justify-content-between" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#currentMonthCollapse" aria-expanded="false"
+                                aria-controls="currentMonthCollapse">
+                                <span>
+                                    <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                    Bieżący miesiąc
+                                </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                </svg>
                             </a>
+                            <div class="collapse" id="currentMonthCollapse">
+                                <ul class="nav flex-column mb-2 blueHover">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
+                                                <path fill-rule="evenodd" d="M11 10.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h3.793L1.146 1.854a.5.5 0 1 1 .708-.708L10 9.293V5.5a.5.5 0 0 1 1 0v5z"/>
+                                              </svg> &nbsp;Przychody
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                                              </svg> &nbsp;Wydatki
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Poprzedni miesiąc
+                            <a class="nav-link d-flex justify-content-between" href="#" data-bs-toggle="collapse" data-bs-target="#lastMonthCollapse"
+                                aria-expanded="false" aria-controls="lastMonthCollapse">
+                                <span>
+                                    <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                    Poprzedni miesiąc
+                                </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                </svg>
                             </a>
+                            <div class="collapse" id="lastMonthCollapse">
+                                <ul class="nav flex-column mb-2 blueHover">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
+                                                <path fill-rule="evenodd" d="M11 10.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h3.793L1.146 1.854a.5.5 0 1 1 .708-.708L10 9.293V5.5a.5.5 0 0 1 1 0v5z"/>
+                                              </svg> &nbsp;Przychody
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                                              </svg> &nbsp;Wydatki
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Niestandardowy
+                            <a class="nav-link d-flex justify-content-between" href="#" data-bs-toggle="collapse" data-bs-target="#choosenCollapse"
+                                aria-expanded="false" aria-controls="choosenCollapse">
+                                <span>
+                                    <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                    Niestandardowy
+                                </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                </svg>
                             </a>
+                            <div class="collapse" id="choosenCollapse">
+                                <ul class="nav flex-column mb-2 blueHover">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
+                                                <path fill-rule="evenodd" d="M11 10.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h3.793L1.146 1.854a.5.5 0 1 1 .708-.708L10 9.293V5.5a.5.5 0 0 1 1 0v5z"/>
+                                              </svg> &nbsp;Przychody
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                              </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                                              </svg> &nbsp;Wydatki
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main id="showBalanceMain" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Przychody</h1>
+                    <h1 class="h2">Bieżący tydzień / Przychody</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span data-feather="calendar" class="align-text-bottom"></span>
@@ -254,8 +391,8 @@
                                 <li><a class="dropdown-item active" href="#">Przychody</a></li>
                                 <li><a class="dropdown-item" href="#">Wydatki</a></li>
                             </ul>
-                        </div>
-                        <div class="btn-group me-2 mx-5">
+                        </div> -->
+                        <div class="btn-group me-2">
                             <button type="button" class="btn btn-sm btn-outline-secondary">Udostępnij</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Eksportuj</button>
                         </div>
@@ -271,7 +408,8 @@
                         &nbsp;&nbsp;Dodaj przychód
                     </button>
                     <div class="collapse mb-3" id="collapseExample">
-                        <form action="seeMonthlyBalance.html" class="needs-validation d-flex flex-column align-items-center">
+                        <form action="seeMonthlyBalance.html"
+                            class="needs-validation d-flex flex-column align-items-center">
                             <div class="row g-2 mb-3">
                                 <div class="col-md-3">
                                     <label for="amount" class="form-label">Kwota</label>
@@ -334,7 +472,7 @@
                                     </div>
                                 </div>
                             </div>
-                                <button type="submit" class="btn btn-success col-md-2 mb-3">Dodaj</button>
+                            <button type="submit" class="btn btn-success col-md-2 mb-3">Dodaj</button>
                         </form>
                     </div>
                 </div>
