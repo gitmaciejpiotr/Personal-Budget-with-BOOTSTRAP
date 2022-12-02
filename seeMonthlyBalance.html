@@ -11,118 +11,15 @@
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="mainMenu.css" rel="stylesheet" />
-
-    <style>
-        .sidebar {
-            position: fixed;
-            top: 0;
-            background: no-repeat url(pictures/dark_water_surface.jpg);
-            background-size: cover;
-            background-position: 80%;
-            background-attachment: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 100;
-            padding: 48px 0 0;
-            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-        }
-
-        .sidebar-sticky {
-            height: calc(100vh - 48px);
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        .sidebar .nav-link {
-            font-weight: 500;
-            color: rgba(255, 255, 255);
-        }
-
-        .sidebar .nav-link .feather {
-            margin-right: 4px;
-            color: #727272;
-        }
-
-        .sidebar .nav-link.active {
-            color: #2470dc;
-        }
-
-        .sidebar .nav-link:hover .feather,
-        .sidebar .nav-link.active .feather {
-            color: inherit;
-        }
-
-        .sidebar-heading {
-            font-size: .75rem;
-        }
-
-        .navbar {
-            background: no-repeat url(pictures/dark_water_surface.jpg);
-            background-size: cover;
-            background-position: 80%;
-            background-attachment: fixed;
-        }
-
-        .navbar-brand {
-            padding-top: .75rem;
-            padding-bottom: .75rem;
-        }
-
-        .navbar .navbar-toggler {
-            top: .25rem;
-            right: 1rem;
-        }
-
-        .navbar .form-control {
-            padding: .75rem 1rem;
-        }
-
-        .form-control-dark {
-            color: #fff;
-            background-color: rgba(255, 255, 255, .1);
-            border-color: rgba(255, 255, 255, .1);
-        }
-
-        .form-control-dark:focus {
-            border-color: transparent;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-        }
-
-        #showBalanceMain {
-            background-color: white;
-        }
-
-        .blueHover .nav-link {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .blueHover .nav-link:hover {
-            color: #2470dc;
-        }
-
-        #exit:hover {
-            color: grey;
-        }
-
-        .nav-link-button {
-            background-color: transparent;
-            border-color: transparent;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="balance-navbar">
         <div class="container">
             <a class="navbar-brand" href="seeMonthlyBalance.html">B O</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
-
-                </ul>
-            </div>
         </div>
     </nav>
 
@@ -134,7 +31,7 @@
                     <h6 class="sidebar-heading px-3 mt-4 mb-1 text-muted text-uppercase">
                         Wybierz raport
                     </h6>
-                    <ul class="nav flex-column mb-2">
+                    <ul class="nav flex-column mb-5">
                         <li class="nav-item">
                             <a class="nav-link d-flex justify-content-between active" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#currentWeekCollapse" aria-expanded="false"
@@ -358,6 +255,28 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Bieżący tydzień / Przychody</h1>
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        KLIKNIJ TU!
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Gratulacje!</h1>
+                                </div>
+                                <div class="modal-body">
+                                    Świetnie zarządzasz finansami!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success"
+                                        data-bs-dismiss="modal">Zamknij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
                             <button type="button" class="btn btn-sm btn-outline-secondary">Udostępnij</button>
