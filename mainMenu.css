@@ -11301,6 +11301,176 @@ textarea.form-control-lg {
   background-size: cover;
 }
 
+#loggingIn-background {
+  height: 85vh;
+  background: no-repeat url(pictures/bieszczady.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+#loggingIn-form-signin {
+  max-width: 330px;
+  padding-top: 27vh;
+}
 
+#loggingIn-form-signin .form-floating:focus-within {
+  z-index: 2;
+}
 
+#loggingIn-form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#loggingIn-form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#rememberMe {
+  color: white;
+}
+
+#registration-background {
+  height: 85vh;
+  background: no-repeat url(pictures/hill&clouds.jpg);
+  background-size: cover;
+  background-position: 5%;
+  background-attachment: fixed;
+}
+
+#registration-form-signin {
+  max-width: 330px;
+  padding-top: 22vh;
+}
+
+#registration-form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+#registration-viewingHorizontally {
+  display: flex;
+  flex-direction: row;
+}
+
+#registration-floatingName  {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#registration-floatingSurname {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#registration-form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+#registration-floatingPassword {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+#registration-form-signin input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#registration-form-signin button {
+  margin-top: 30px;
+  background-color: rgb(0, 0, 87);
+  border-color: rgb(0, 0, 87);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  background: no-repeat url(pictures/dark_water_surface.jpg);
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255);
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+}
+
+#balance-navbar {
+  background: no-repeat url(pictures/dark_water_surface.jpg);
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+}
+
+#balance-navbar .navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+#balance-navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+#balance-navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+#showBalanceMain {
+  background-color: white;
+}
+
+.blueHover .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.blueHover .nav-link:hover {
+  color: #2470dc;
+}
+
+#exit:hover {
+  color: grey;
+}
+
+.nav-link-button {
+  background-color: transparent;
+  border-color: transparent;
+}

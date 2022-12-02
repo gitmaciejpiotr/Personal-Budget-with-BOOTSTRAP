@@ -11,47 +11,12 @@
     rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link href="mainMenu.css" rel="stylesheet" />
-
-  <style>
-    #background {
-      height: 85vh;
-      background: no-repeat url(pictures/bieszczady.jpg);
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .form-signin {
-      max-width: 330px;
-      padding-top: 27vh;
-    }
-
-    .form-signin .form-floating:focus-within {
-      z-index: 2;
-    }
-
-    .form-signin input[type="email"] {
-      margin-bottom: -1px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .form-signin input[type="password"] {
-      margin-bottom: 10px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-
-    #rememberMe {
-      color: white;
-    }
-  </style>
-
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#!">B O</a>
+      <a class="navbar-brand" href="mainMenu.html">B O</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navbar-toggler-icon"></span></button>
@@ -66,16 +31,16 @@
     </div>
   </nav>
 
-  <div id="background">
-    <main class="form-signin w-100 m-auto">
+  <div id="loggingIn-background">
+    <main class="form-signin w-100 m-auto" id="loggingIn-form-signin">
       <form action="seeMonthlyBalance.html">
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-          <label for="floatingInput">Email</label>
+          <input type="email" class="form-control" id="loggingIn-floatingInput" placeholder="name@example.com" required>
+          <label for="loggingIn-floatingInput">Email</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-          <label for="floatingPassword">Hasło</label>
+          <input type="password" class="form-control" id="loggingIn-floatingPassword" placeholder="Password" required>
+          <label for="loggingIn-floatingPassword">Hasło</label>
         </div>
 
         <div class="checkbox mb-3">
