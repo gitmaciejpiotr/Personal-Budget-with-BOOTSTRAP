@@ -68,7 +68,6 @@ for(let i = 0; i < finishEditionButtons.length; i++) {
 
 
 var date = new Date();
-
 var day = date.getDate();
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
@@ -82,3 +81,54 @@ const dates = document.querySelectorAll(".theDate");
 for (let date of dates) {
     date.max = today;
 }
+
+
+(() => {
+    'use strict'
+
+    feather.replace({ 'aria-hidden': 'true' })
+
+    const ctx = document.getElementById('myChart')
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [
+                'Poniedziałek',
+                'Wtorek',
+                'Środa',
+                'Czwartek',
+                'Piątek',
+                'Sobota',
+                'Niedziela'
+            ],
+            datasets: [{
+                data: [
+                    153,
+                    213,
+                    184,
+                    240,
+                    234,
+                    240,
+                    0
+                ],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#007bff',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            }
+        }
+    })
+})()

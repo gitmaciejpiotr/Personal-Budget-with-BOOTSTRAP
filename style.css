@@ -11495,9 +11495,10 @@ td button {
 
 .finishEditionButton {
   border-radius: 5px;
+  border: none;
   margin-top: 5px;
-  padding: 4.5px;
-  background-color: rgb(18, 148, 48);
+  padding: 9px;
+  background-color: rgb(0, 136, 32);
   color: white;
   font-weight: 400;
 }
