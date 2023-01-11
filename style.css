@@ -6371,6 +6371,7 @@ textarea.form-control-lg {
 }
 
 .placeholder {
+  resize: none;
   display: inline-block;
   min-height: 1em;
   vertical-align: middle;
@@ -11473,4 +11474,38 @@ textarea.form-control-lg {
 .nav-link-button {
   background-color: transparent;
   border-color: transparent;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+td button {
+  border-radius: 15%;
+  margin: 0 5px 0;
+}
+
+.finishEditionButton {
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 4.5px;
+  background-color: rgb(18, 148, 48);
+  color: white;
+  font-weight: 400;
+}
+
+.comment {
+  margin-bottom: 8px;
+}
+
+.amountEditionInput {
+  width: 80px;
 }
