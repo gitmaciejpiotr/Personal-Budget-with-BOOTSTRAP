@@ -29,3 +29,56 @@ for(let i = 0; i < hideCommentButtons.length; i++) {
         comments[i].classList.remove('show');
     })
 }
+
+const editButtons = document.querySelectorAll(".editButton");
+
+for(let i = 0; i < editButtons.length; i++) {
+    editButtons[i].addEventListener('click', function(){
+        const dataSetToEdit = document.querySelector(`#rec${i+1}`);
+        // console.log(dataSetToEdit[0]);
+        const dataToEdit = dataSetToEdit.querySelectorAll(".dataToEdit");
+        for(let j = 0; j < dataToEdit.length; j++) {
+            dataToEdit[j].classList.toggle('hide');
+        }
+
+        const editionInputs = dataSetToEdit.querySelectorAll(".editionInput");
+        for(let j = 0; j < editionInputs.length; j++) {
+            editionInputs[j].classList.remove('hide');
+        }
+    })
+}
+
+const finishEditionButtons = document.querySelectorAll(".finishEditionButton");
+
+for(let i = 0; i < finishEditionButtons.length; i++) {
+    finishEditionButtons[i].addEventListener('click', function(){
+        const dataSetToEdit = document.querySelector(`#rec${i+1}`);
+        // console.log(dataSetToEdit[0]);
+        const dataToEdit = dataSetToEdit.querySelectorAll(".dataToEdit");
+        for(let j = 0; j < dataToEdit.length; j++) {
+            dataToEdit[j].classList.remove('hide');
+        }
+
+        const editionInputs = dataSetToEdit.querySelectorAll(".editionInput");
+        for(let j = 0; j < editionInputs.length; j++) {
+            editionInputs[j].classList.toggle('hide');
+        }
+    })
+}
+
+
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day; 
+
+const dates = document.querySelectorAll(".theDate");
+for (let date of dates) {
+    date.max = today;
+}
